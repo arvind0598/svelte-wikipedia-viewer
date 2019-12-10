@@ -13,9 +13,9 @@ afterUpdate(() => {
 
 {#if searchData.status === 'FETCHED'}
   {#if searchData.results.length > 0}
-    {#each results as data(data.id)}
+    {#each results as data}
       <div class="column is-3">
-        <SingleResult title={data.title} snippet={data.snippet}/>
+        <SingleResult caption={data.title} snippet={data.snippet} pageid={data.pageid}/>
       </div>
     {/each}
   {/if}
