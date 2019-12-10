@@ -1,10 +1,11 @@
 <script>
-  import { fade } from 'svelte/transition';
+  import { fly } from 'svelte/transition';
   import { afterUpdate } from 'svelte';
 
   export let caption = '';
   export let snippet = '';
   export let pageid = -1;
+  export let delay = 0;
 
   let title = 'DEFAULT TITLE'
   let subtitle = 'DEFAULT SUBTITLE';
@@ -40,14 +41,19 @@
 .card-footer {
   margin-top: auto;
 }
+
+.subtitle {
+  text-transform: capitalize;
+  font-style: italic;
+}
 </style>
 
-<div class="card">
+<div class="card" transition:fly="{{delay}}">
   <div class="card-content">
     <div class="media">
       <div class="media-content">
         <p class="title is-3 has-text-black-bis"> {title} </p>
-        <p class="subtitle is-5 has-text-dark"> <i>{subtitle}</i> </p>
+        <p class="subtitle is-5 has-text-dark"> {subtitle} </p>
       </div>
     </div>
 

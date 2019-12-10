@@ -7,8 +7,9 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "lint": "eslint src/",
     "lintfix": "eslint src/ --fix",
-    "build": "parcel build src/index.html",
-    "start": "parcel src/index.html"
+    "cleanup": "rm -rf dist && rm -rf .cache",
+    "build": "npm run cleanup && parcel build src/index.html --no-source-maps --experimental-scope-hoisting",
+    "start": "npm run cleanup && parcel src/index.html"
   },
   "author": "",
   "license": "ISC",
@@ -18,7 +19,6 @@
     "eslint-plugin-import": "^2.19.1",
     "parcel-bundler": "^1.12.4",
     "parcel-plugin-svelte": "^4.0.5",
-    "sass": "^1.23.7",
     "svelte": "^3.16.1"
   },
   "browserslist": [
