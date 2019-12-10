@@ -1,0 +1,27 @@
+{
+  "name": "wikipedia-viewer",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "eslint src/",
+    "lintfix": "eslint src/ --fix",
+    "build": "parcel build src/index.html",
+    "start": "parcel src/index.html"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "eslint": "^6.7.2",
+    "eslint-config-airbnb-base": "^14.0.0",
+    "eslint-plugin-import": "^2.19.1",
+    "parcel-bundler": "^1.12.4",
+    "parcel-plugin-svelte": "^4.0.5",
+    "sass": "^1.23.7",
+    "svelte": "^3.16.1"
+  },
+  "browserslist": [
+    "last 1 chrome versions"
+  ]
+}
