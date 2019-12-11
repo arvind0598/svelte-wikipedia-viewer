@@ -9,7 +9,6 @@
   };
 
   const fetchData = (event) => {
-    console.log(searchTerm);
     searchData = {
       status: 'FETCHING',
       results: [],
@@ -18,14 +17,12 @@
     fetch(`https://en.wikipedia.org/w/api.php?action=query&list=search&srsearch=${searchTerm}&format=json&origin=*`)
     .then(data => data.json())
     .then(data => {
-      console.log(data.query.search);
       searchData = {
         status: 'FETCHED',
         results: data.query.search,
       };
     })
     .catch(err => {
-      console.log(err);
       searchData = {
         status: 'ERROR',
         results: [],
