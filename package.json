@@ -19,7 +19,7 @@
     "eslint-plugin-import": "^2.19.1",
     "parcel-bundler": "^1.12.4",
     "parcel-plugin-svelte": "^4.0.5",
-    "svelte": "^3.16.1"
+    "svelte": "^3.49.0"
   },
   "browserslist": [
     "last 1 chrome versions"
